@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Sapphire Embroidered Sherwani</title>
+  <desc id="desc">A sapphire blue embroidered sherwani with gold motifs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef5ff"/>
+      <stop offset="1" stop-color="#d9cdb8"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#185fd0"/>
+      <stop offset="0.48" stop-color="#123f8f"/>
+      <stop offset="1" stop-color="#071f4c"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f8de87"/>
+      <stop offset="0.55" stop-color="#c69230"/>
+      <stop offset="1" stop-color="#fff0b0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#071f4c" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="720" height="960" fill="url(#bg)"/>
+  <circle cx="605" cy="125" r="115" fill="#9ebdf0" opacity=".32"/>
+  <circle cx="120" cy="810" r="155" fill="#caa765" opacity=".25"/>
+  <g filter="url(#shadow)">
+    <path d="M235 135h250l57 117-54 54-31-30 31 538c-74 35-182 35-256 0l31-538-31 30-54-54 57-117Z" fill="url(#blue)" stroke="#08265b" stroke-width="5"/>
+    <path d="M328 139h64l45 90-77 86-77-86 45-90Z" fill="#f7edce" stroke="#c99738" stroke-width="5"/>
+    <path d="M360 314v488" stroke="url(#gold)" stroke-width="8"/>
+    <path d="M258 300c55 33 148 34 203 0" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M255 464c58 35 151 35 210 0" fill="none" stroke="#d6a846" stroke-width="6" stroke-linecap="round" opacity=".85"/>
+    <path d="M249 630c67 37 156 37 223 0" fill="none" stroke="#d6a846" stroke-width="6" stroke-linecap="round" opacity=".85"/>
+    <g fill="#f4d173">
+      <circle cx="305" cy="380" r="7"/><circle cx="416" cy="380" r="7"/>
+      <circle cx="292" cy="535" r="7"/><circle cx="429" cy="535" r="7"/>
+      <circle cx="279" cy="698" r="7"/><circle cx="441" cy="698" r="7"/>
+    </g>
+    <g fill="none" stroke="#f4d173" stroke-width="4" stroke-linecap="round">
+      <path d="M304 380c18-28 34-28 52 0"/>
+      <path d="M416 380c-18-28-34-28-52 0"/>
+      <path d="M292 535c24-30 45-30 68 0"/>
+      <path d="M429 535c-24-30-45-30-68 0"/>
+      <path d="M279 698c29-34 52-34 81 0"/>
+      <path d="M441 698c-29-34-52-34-81 0"/>
+    </g>
+    <circle cx="360" cy="394" r="8" fill="#f8de87"/>
+    <circle cx="360" cy="472" r="8" fill="#f8de87"/>
+    <circle cx="360" cy="550" r="8" fill="#f8de87"/>
+    <circle cx="360" cy="628" r="8" fill="#f8de87"/>
+  </g>
+  <text x="360" y="900" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="700" fill="#08265b">Sapphire Embroidered Sherwani</text>
+</svg>

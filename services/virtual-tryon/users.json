@@ -1,0 +1,26 @@
+{
+  "vendor@fitcart.com": {
+    "id": "33820c0e",
+    "name": "Demo Vendor",
+    "email": "vendor@fitcart.com",
+    "password": "demo1234",
+    "role": "vendor",
+    "created_at": "2026-04-18T15:06:36.422676"
+  },
+  "admin@swyf.com": {
+    "id": "admin-001",
+    "name": "Platform Admin",
+    "email": "admin@swyf.com",
+    "password": "admin123",
+    "role": "admin",
+    "created_at": "2026-04-18T15:15:00.000000"
+  },
+  "kaddu@gmail.com": {
+    "id": "5bde02d3",
+    "name": "kaddu",
+    "email": "kaddu@gmail.com",
+    "password": "kaddu",
+    "role": "vendor",
+    "created_at": "2026-04-18T15:22:53.736415"
+  }
+}

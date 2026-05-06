@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Product image unavailable</title>
+  <desc id="desc">A SWYF product placeholder.</desc>
+  <rect width="720" height="960" fill="#f3f0ea"/>
+  <rect x="150" y="170" width="420" height="560" rx="26" fill="#ffffff" stroke="#d4c7b8" stroke-width="6"/>
+  <path d="M280 230h160l65 130-66 50-23-42v286H304V368l-23 42-66-50 65-130Z" fill="#e7dfd4" stroke="#c6b7a5" stroke-width="6"/>
+  <circle cx="360" cy="800" r="42" fill="#31a59d"/>
+  <path d="M337 800h46M360 777v46" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+  <text x="360" y="875" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#5a5048">SWYF Product</text>
+</svg>
