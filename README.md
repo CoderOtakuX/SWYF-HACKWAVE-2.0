@@ -1,117 +1,235 @@
 # SWYF - See What You Fit
 
-SWYF is an AI-powered fashion platform for virtual try-on, skin tone analysis, rewards, marketplace browsing, and 2D-to-3D product generation.
+<p align="center">
+  <img src="assets/media/swyf%20logo.png" alt="SWYF Logo" width="300">
+</p>
 
-## Features
+<p align="center">
 
-- Virtual try-on workflow with catalog-backed outfit selection
-- Skin tone analysis with personalized color recommendations
-- 2D-to-3D generator experience in the Projects section
-- Rewards marketplace and token tracking
-- Product marketplace, product detail, cart, checkout, vendor, and admin views
-- Dark mode, responsive layout, and Spline-backed visual background
 
-## Project Structure
 
-```text
-frontend/                    React + Vite frontend
-services/
-  virtual-tryon/             Flask API for catalog, try-on, chat, auth, and skin tone routes
-  color-analysis/            Skin tone/color analysis package and local FastAPI wrapper
-assets/                      Shared project assets
-docs/                        Supporting project documentation
+
+> [!TIP]
+> This project is currently in its initial development phase. Core features are functional but may contain bugs. Please report any issues through our issue tracker.
+
+SWYF is an innovative AI-powered virtual try-on platform that revolutionizes online fashion shopping, allowing users to visualize how clothes will look on them before making a purchase.
+
+## 📋 Table of Contents
+
+- [Features](#features)
+- [Demo](#demo)
+- [Project Structure](#project-structure)
+- [Screenshots](#screenshots)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Rewards System](#rewards-system)
+- [Development Log](#development-log)
+- [Current Status](#current-status)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
+## ✨ Features
+
+- 👔 **Virtual Try-On**: Try clothing items virtually in real-time using AI technology
+- 🎨 **Skin Tone Analysis**: Get personalized color recommendations based on your skin tone
+- 🏆 **Rewards Program**: Earn tokens for interactions with the platform
+- 📱 **Responsive Design**: Works seamlessly on desktop and mobile devices
+- 🌙 **Dark Mode Support**: Enhanced viewing experience with full dark mode support
+- 🔄 **Interactive 3D Background**: Engaging user experience with interactive Spline 3D elements
+
+## 🎬 Demo
+
+Watch our demo video to see SWYF in action! The demo showcases the virtual try-on experience, color analysis, user interaction with 3D elements, and our rewards system.
+
+## 🏗️ Project Structure
+
+```
+swyf/
+├── frontend/                    # React frontend application
+│   ├── src/                     # Source code
+│   │   ├── components/          # Reusable components
+│   │   ├── pages/               # Page components
+│   │   ├── contexts/            # React contexts (Theme, etc.)
+│   │   ├── hooks/               # Custom React hooks
+│   │   ├── lib/                 # Utility functions
+│   │   ├── App.tsx              # Main application component
+│   │   └── ...                  # Other React files
+│   ├── public/                  # Public assets
+│   ├── package.json             # Node.js dependencies
+│   └── ...                      # Configuration files
+│
+├── services/                    # Backend services
+│   ├── virtual-tryon/           # Virtual try-on service
+│   │   ├── app/                 # Flask application modules
+│   │   ├── static/              # Static assets
+│   │   │   ├── assets/          # Image assets
+│   │   │   └── react-app/       # Built React app
+│   │   ├── templates/           # HTML templates
+│   │   └── flasktry.py          # Main Flask application
+│   │
+│   └── skin-tone/               # Skin tone analysis service
+│       ├── src/                 # Source code
+│       ├── tests/               # Unit tests
+│       └── docs/                # Documentation
+│
+├── assets/                      # Shared assets
+│   └── ...                      # Other image assets
+│
+├── docs/                        # Project documentation
+│   └── ...                      # Documentation files
+│
+└── README.md                    # Project documentation
 ```
 
-## Requirements
+# Implementation
+<img width="383" height="491" alt="image" src="https://github.com/user-attachments/assets/9902f69b-6200-4d59-8765-56294ec82ace" />
 
-- Node.js 20.9+
-- Python 3.11+ or a compatible conda Python
-- npm
+
+## 📸 Screenshots of site
+
+> **Note:** These are early prototype screenshots. The UI is evolving daily as we develop the platform.
+
+### Projects
+![Projects](assets/projects.png)
+*AI-driven skin tone detection with virtual try-on for customized outfit suggestions*
+
+### Rewards System
+![Rewards Page](assets/rewards.png)
+*Track your rewards journey and earn tokens for platform interactions*
+
+### Business Model
+![Business Model](assets/businessmodel.png)
+*Augmented Reality try-on platform for mobile devices, offering B2C personalization and B2B integration for brands and retailers*
+
+## 🛠️ Technologies Used
+
+### Frontend
+- React.js with TypeScript
+- Tailwind CSS for styling
+- React Router for navigation
+- Shadcn/ui for UI components
+- Lucide React for icons
+- TanStack Query for data fetching
+- Spline for 3D interactive backgrounds
+- Context API for state management
+
+### Backend
+- Flask (Python)
+- OpenCV for image processing
+- TensorFlow/PyTorch for AI models
+- RESTful API design
+
+## 🚀 Installation
+
+> **Note:** Installation steps are evolving as the project develops. Check back for updates.
+
+### Prerequisites
+- Node.js (v16+)
+- Python (v3.8+)
 - pip
+- Git
 
-## Environment
+### Setup
 
-Create these local files. They are ignored by git.
-
-`frontend/.env`
-
-```env
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-`services/virtual-tryon/.env`
-
-```env
-GEMINI_API_KEY=your_gemini_api_key
-GROQ_API_KEY=optional_groq_api_key
-```
-
-Supabase must use the exact Project URL from the Supabase dashboard. If the URL does not resolve, auth and database calls will fail with `Failed to fetch`.
-
-## Install
-
+1. Clone the repository:
 ```bash
-cd frontend
+git clone 
+cd swyf
+```
+
+2. Set up the virtual try-on service:
+```bash
+cd services/virtual-tryon
+pip install -r requirements.txt
+```
+
+3. Set up the skin tone analysis service:
+```bash
+cd ../skin-tone
+pip install -r requirements.txt
+```
+
+4. Set up the frontend:
+```bash
+cd ../../frontend
 npm install
 ```
 
+5. Build the frontend:
 ```bash
-cd ../services/virtual-tryon
-pip install -r requirements.txt
-```
-
-```bash
-cd ../color-analysis
-pip install -r requirements.txt
-pip install -e .
-pip install fastapi uvicorn python-multipart
-```
-
-## Run Locally
-
-Start the frontend:
-
-```bash
-cd frontend
-npm run dev -- --host 127.0.0.1 --port 5174 --strictPort
-```
-
-Start the Flask backend:
-
-```bash
-cd services/virtual-tryon
-python -m flask --app flasktry run --host 127.0.0.1 --port 5000
-```
-
-Start the color-analysis service:
-
-```bash
-cd services/color-analysis
-python -m uvicorn api_server:app --host 127.0.0.1 --port 8000
-```
-
-Local URLs:
-
-- Frontend: `http://127.0.0.1:5174/`
-- Flask API: `http://127.0.0.1:5000/api/catalog`
-- Color analysis health: `http://127.0.0.1:8000/health`
-
-## Build
-
-```bash
-cd frontend
 npm run build
 ```
 
-## Notes
+6. Copy the built files to the Flask static directory:
+```bash
+cp -r dist/* ../services/virtual-tryon/static/react-app/
+```
 
-- The frontend proxies `/api` requests to the Flask backend on port `5000`.
-- The color-analysis FastAPI wrapper exposes `/health` and `/stone`.
-- Supabase credentials are optional for loading the app locally, but auth/database features require a valid active Supabase project.
-- The 2D-to-3D generator depends on remote GPU availability. Generation can be temporarily blocked by quota limits.
-- Keep API keys out of commits and rotate any key that was shared publicly.
+## 💻 Usage
 
-## License
+1. Start the virtual try-on service:
+```bash
+cd services/virtual-tryon
+python flasktry.py
+```
 
-Proprietary. All rights reserved.
+2. For development of the frontend:
+```bash
+cd frontend
+npm run dev
+```
+
+3. Access the application:
+   - Main application: `http://localhost:5000`
+   - Development server: `http://localhost:3000`
+
+## 🏆 Rewards System
+
+Our rewards program offers:
+
+- **SWYF Tokens**: Earn tokens for every interaction with the platform
+- **Progress Tracking**: Track your rewards journey
+- **Exclusive Benefits**: Unlock discounts, early access, and special features
+- **Multi-level Rewards**: Progress through different levels to earn more benefits
+
+## 🚧 Current Status
+
+### What's Working
+- ✅ Flask backend serving React frontend
+- ✅ Dark mode toggle and theming throughout the application
+- ✅ Basic 3D backgrounds using Spline
+- ✅ Product catalog browsing
+- ✅ Responsive UI for mobile and desktop
+- ✅ Theme-aware components with proper contrast
+
+### In Progress
+- 🔄 Optimizing 3D element performance
+- 🔄 Enhancing error handling for assets
+- 🔄 Building FAQ sections
+- 🔄 Implementing business model page
+
+### Coming Soon
+- ⏳ User authentication
+- ⏳ Complete virtual try-on implementation
+
+## 🙏 Acknowledgements
+
+SWYF is built using several open-source technologies and services. We would like to acknowledge and thank the following:
+
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+- [Spline](https://spline.design/) - 3D design and interactive elements
+- [Shadcn/ui](https://ui.shadcn.com/) - Re-usable UI components
+- [Flask](https://flask.palletsprojects.com/) - Python web framework
+- [OpenCV](https://opencv.org/) - Open Source Computer Vision Library
+- [TensorFlow](https://www.tensorflow.org/) - Open-source machine learning framework
+- [Lucide Icons](https://lucide.dev/) - Beautiful & consistent icons
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling.
+
+
+## 📄 License
+
+SWYF is proprietary software. All rights reserved.
+
+© 2026 SWYF - See What You Fit 
