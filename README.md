@@ -8,6 +8,12 @@
 
 
 
+https://github.com/user-attachments/assets/68d27621-7a3a-4ef0-a6d4-214ab26e8237
+
+
+
+
+
 
 > [!TIP]
 > This project is currently in its initial development phase. Core features are functional but may contain bugs. Please report any issues through our issue tracker.
