@@ -1,13 +1,31 @@
 services:
   - type: web
     name: swyf-virtual-tryon
-    runtime: python
-    buildCommand: ""
-    startCommand: gunicorn flasktry:app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn flasktry:app"
+    rootDir: services/virtual-tryon
     envVars:
       - key: FLASK_ENV
         value: production
-    buildFilter:
-      paths:
-        - services/virtual-tryon/**
-    rootDir: services/virtual-tryon
+      - key: GEMINI_API_KEY
+        sync: false
+
+  - type: web
+    name: swyf-color-analysis
+    env: python
+    buildCommand: "pip install -r requirements.txt && pip install fastapi uvicorn python-multipart && pip install -e ."
+    startCommand: "uvicorn api_server:app --host 0.0.0.0 --port $PORT"
+    rootDir: services/color-analysis
+
+  - type: web
+    name: swyf-frontend
+    env: static
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: "./dist"
+    rootDir: frontend
+    envVars:
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        sync: false
